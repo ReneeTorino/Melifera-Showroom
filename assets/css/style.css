@@ -104,6 +104,9 @@ p {
   background-repeat: no-repeat;
   width: 100%;
   height: 100%; }
+  @media (max-width: 767px) {
+    .bg_cover { background-position: center left;}
+  }
 
 /*===== All Button Style =====*/
 
@@ -130,9 +133,9 @@ p {
   -o-transition: all 0.4s ease-out 0s;
   transition: all 0.4s ease-out 0s;
   background-color: #cf4520;
-  -webkit-box-shadow: 0px 5px 16px 0px rgba(207,69,32,1);
-  -moz-box-shadow: 0px 5px 16px 0px rgba(207,69,32,1);
-  box-shadow: 0px 5px 16px 0px rgba(207,69,32,1);
+  -webkit-box-shadow: -3px 5px 8px 0px rgba(176,176,176,1);
+  -moz-box-shadow: -3px 5px 8px 0px rgba(176,176,176,1);
+  box-shadow: -3px 5px 8px 0px rgba(176,176,176,1);
   font-family: 'Barlow', sans-serif;
   text-transform: uppercase; }
   .main-btn i {
@@ -765,18 +768,17 @@ p {
     .about-image .about-btn .main-btn {
       line-height: 58px;
       padding: 0 40px;
-      border: 8px solid #fff;
+      color: black;
+      background-color: #5CCA81;
+      border: 8px solid black;
       font-weight: 700;
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       box-shadow: none; }
-      .about-image .about-btn .main-btn span {
-        font-size: 35px; }
-        @media (max-width: 767px) {
-          .about-image .about-btn .main-btn span {
-            font-size: 28px; } }
       .about-image .about-btn .main-btn:hover {
-        border-color: #EB3656; }
+        color: #5CCA81;
+        background-color: black;
+        border-color: #5CCA81; }
       @media (max-width: 767px) {
         .about-image .about-btn .main-btn {
           line-height: 48px;
@@ -814,9 +816,21 @@ p {
     padding-top: 75px;
     padding-bottom: 80px; } }
 
+.services-area {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+
+.section-title  {
+  color: white;
+  background-color: black;
+}
 .single-services {
   padding: 50px 30px;
   background-color: #fff;
+  opacity: (0.3);
   -webkit-transition: all 0.4s ease-out 0s;
   -moz-transition: all 0.4s ease-out 0s;
   -ms-transition: all 0.4s ease-out 0s;
@@ -830,12 +844,13 @@ p {
       padding: 30px 10px; } }
   .single-services .services-icon i {
     font-size: 52px;
-    color: #D4470F;
+    color: #FDB522;
     -webkit-transition: all 0.4s ease-out 0s;
     -moz-transition: all 0.4s ease-out 0s;
     -ms-transition: all 0.4s ease-out 0s;
     -o-transition: all 0.4s ease-out 0s;
     transition: all 0.4s ease-out 0s; }
+
   .single-services .services-content .services-title {
     font-size: 22px;
     font-weight: 600;
@@ -847,6 +862,8 @@ p {
     transition: all 0.4s ease-out 0s; }
   .single-services:hover {
     background-color: #D4470F; }
+  .verdes:hover {
+      background-color: #5CCA81; }
     .single-services:hover .services-icon i {
       color: #fff; }
     .single-services:hover .services-content .services-title,
@@ -864,16 +881,19 @@ p {
 .single-project {
   position: relative; }
   .single-project .project-image {
-    position: relative; }
+    position: relative;
+    transition:all .5s ease-in-out; }
+    .single-project .project-image:hover {
+      filter: opacity(0.5); }
     .single-project .project-image::before {
       position: absolute;
       content: '';
       width: 100%;
       height: 100%;
       background: white;
-      background: -webkit-linear-gradient(rgba(255, 255, 255, 0) 50%, #D4470F 100%);
-      background: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #D4470F 100%);
-      background: linear-gradient(rgba(255, 255, 255, 0) 50%, #D4470F 100%);
+      background: -webkit-linear-gradient(rgba(255, 255, 255, 0) 50%, white 100%);
+      background: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, white 100%);
+      background: linear-gradient(rgba(255, 255, 255, 0) 50%, white 100%);
       opacity: 0;
       -webkit-transition: all 0.4s ease-out 0s;
       -moz-transition: all 0.4s ease-out 0s;
@@ -902,7 +922,8 @@ p {
       font-weight: 600;
       font-family: 'Barlow', sans-serif;
       position: relative;
-      color: #fff;
+      color: black;
+      border-radius: 3px;
       margin-left: 60px; }
       .single-project .project-content .project-title::before {
         position: absolute;
@@ -921,7 +942,6 @@ p {
     -ms-transform: translateY(0%);
     -o-transform: translateY(0%);
     transform: translateY(0%); }
-
 .project-active .slick-dots {
   text-align: center;
   margin-top: 50px; }
@@ -933,7 +953,7 @@ p {
       height: 15px;
       border-radius: 50px;
       border: 0;
-      background-color: rgba(212, 71, 15, 0.7);
+      background-color: rgba(92, 202, 129, 0.7);
       -webkit-transition: all 0.4s ease-out 0s;
       -moz-transition: all 0.4s ease-out 0s;
       -ms-transition: all 0.4s ease-out 0s;
@@ -943,7 +963,9 @@ p {
       cursor: pointer; }
     .project-active .slick-dots li.slick-active button {
       width: 35px;
-      background-color: #D4470F; }
+      background-color: #3DA860; }
+
+
 
 /*===========================
         6.TEAM css
