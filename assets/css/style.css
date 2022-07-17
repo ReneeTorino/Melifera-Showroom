@@ -23,10 +23,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 body {
+  background-color: #FFFBF2;
   font-family: 'Hind', sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: "black"; }
+  color: black; }
 
 * {
   margin: 0;
@@ -151,16 +152,29 @@ p {
       color: #fff; }
 
 /*===== All Section Title Style =====*/
+
+.section-title {
+  padding: 20px;
+  border-radius: 40px;
+  background: black;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  flex-direction: column;
+}
+.section-title:hover {
+  background-color: black;
+}
 .section-title .sub-title {
   font-size: 18px;
-  color: #cf4520;
+  color: #FDB522;
   text-transform: uppercase; }
   @media (max-width: 767px) {
     .section-title .sub-title {
       font-size: 16px; } }
 
 .section-title .title {
-  font-size: 35px;
+  font-size: 40px;
+  color: white;
   text-transform: uppercase; }
   @media (max-width: 767px) {
     .section-title .title {
@@ -474,7 +488,8 @@ p {
     2.HEADER css
 ===========================*/
 .header-area {
-  position: relative; }
+  position: relative;
+ }
   .header-area .shape {
     position: absolute; }
   .header-area .header-shape-one {
@@ -820,13 +835,8 @@ p {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
-  background-size: cover;
-}
+  background-size: cover; }
 
-.section-title  {
-  color: white;
-  background-color: black;
-}
 .single-services {
   padding: 50px 30px;
   background-color: #fff;
@@ -970,6 +980,7 @@ p {
 /*===========================
         6.TEAM css
 ===========================*/
+
 @media (max-width: 767px) {
   .team-area {
     padding-top: 75px;
@@ -1085,7 +1096,8 @@ p {
   z-index: 9; }
 
 .testimonial-active {
-  background-color: #D4470F;
+  background-color: rgba(212,71,15,0.9);
+  border-radius: 15px;
   padding: 60px 30px; }
   @media (max-width: 767px) {
     .testimonial-active {
@@ -1154,10 +1166,18 @@ p {
 /*===========================
        8.CONTACT css
 ===========================*/
+
 @media (max-width: 767px) {
   .contact-area {
     padding-top: 75px;
-    padding-bottom: 80px; } }
+    padding-bottom: 80px;
+     } }
+
+    .contact-area {
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center center;
+      background-size: cover; }
 
 .form-group {
   margin: 0; }
@@ -1245,6 +1265,9 @@ p.form-message.error {
 /*===========================
        10.FOOTER css
 ===========================*/
+.footer-widget {
+  background-color: #00BCC5;
+}
 @media (max-width: 767px) {
   .footer-widget {
     padding-top: 30px;
