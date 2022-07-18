@@ -984,7 +984,9 @@ p {
 @media (max-width: 767px) {
   .team-area {
     padding-top: 75px;
-    padding-bottom: 80px; } }
+    padding-bottom: 80px;   }  }
+
+
 
 .single-team .team-image img {
   width: 100%; }
